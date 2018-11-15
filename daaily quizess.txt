@@ -26,6 +26,7 @@ option [2] is correct
 6. }
 7. }
 
+
 Which statement is true?
 1). Compilation succeeds and d takes the value 253.
 2). Line 5 contains an error that prevents compilation.
@@ -1121,6 +1122,286 @@ Q. Choose the correct statements about parameterized test.
 4). It can be done with @RunWith(Suite.class)
 Solution :
 option [1,2,3] are correct
+
+========================================
+daily quiz 9
+1.
+
+Which of the given class is used to read property file?
+1). Logger
+2). Appender
+3). System
+4). PropertyConfigurator
+Solution :
+option [4] is correct
+
+
+2.
+
+Q. Which method must be defined by a class implementing the java.lang.Runnable interface?
+1). void run()
+2). public void run()
+3). public void start()
+4). void run(int priority)
+Solution :
+option [2] is correct
+
+
+3..
+Q. Which of the Appender should be used to send LoggingEvent objects to a remote 
+a log server?         
+1). SysLogAppender
+2). ConsoleAppender
+3). Telnet Appender
+4). SocketAppender
+Solution :
+option [4] is correct
+
+
+4.
+
+Q. Which of the following method is responsible to start a Thread?
+1). start()
+2). run()
+3). init()
+4). go()
+Solution :
+option [1] is correct
+
+
+5.
+
+Q. Log4j can be configured with the help of?
+1). XML files
+2). Properties file
+3). Both a and b is true
+4). Log4j cannot be configured with external files
+Solution :
+option [3] is correct
+
+
+6.
+Q. wait(),notify() and notifyAll() methods of ___________________ class/interface 
+1). Object
+2). Thread
+3). Runnable 
+4). Class
+Solution :
+option [2] is correct
+
+
+7.
+
+. Arrange the priorities in ascending order?
+A.INFO B.ERROR c.DEBUG d.FATAL e.WARN
+1). c,a,e,b,d
+2). a,b,c,d,e
+3). b,c,d,e,a
+4). c,b,d,e,a
+Solution :
+option [1] is correct
+
+8.
+Q. Which of the following are methods of Thread class?
+1). isAlive()
+2). notify()
+3). wait()
+4). join()
+Solution :
+option [1,4] are correct
+
+
+
+9.
+Q. Select the appropriate ways of creating Thread.
+1). Extending Thread class
+2). Implementing Runnable interface
+3). Both of the above
+4). Only by Extending Thread class
+Solution :
+option [3] is correct
+
+
+10.
+Q. What will be the output of the following code?           
+
+myLogger.setLevel(Level.INFO);  
+myAppender = new ConsoleAppender(new SimpleLayout());   
+myLogger.info("Logged since INFO=INFO");
+myLogger.debug("Logged, since DEBUG >INFO");
+1). Logged since INFO=INFO
+     Logged, since DEBUG >INFO
+2). Logged, since DEBUG >INFO
+3). Logged since INFO=INFO
+4). No output
+Solution :
+option [4] is correct
+
+
+==========================================================
+
+Daily  quizes 10
+@FunctionalInterface
+interface Power
+{
+ public int calculatePower(int base,int index);
+}
+public class CalculatePowerDemo{
+
+ public static void main(String[] args) {
+int x=4,y=2;
+}
+}How to call calculatePower() in CalculatePowerDemo class?
+1). Class CalculatePowerDemo need to implement Power interface and has to override calculatePower() to call it
+2). It can be implemented as given below
+Power pwr = (base,index)->{for(int i=0;i<index;i++)
+  {
+    base = base*index;
+  }
+  return base;};
+  result= pwr.calculatePower(x, y);
+  System.out.println(result);
+3). It can be implemented as given below
+Power pwr = (base,index)->{for(int i=0;i<index;i++)
+  {
+    base = base*index;
+  }
+  };
+  result= pwr.calculatePower(x, y);
+  System.out.println(result);
+4). It can be implemented as given below
+System.out.println((base,index)->{for(int i=0;i<index;i++)
+  {
+    base = base*index;
+  }
+  return base;};)
+Solution :
+option [2] is correct
+
+
+
+2.
+String []strng = new String[]{"abc","xyz","abcxyz"};
+Stream<String>stream = Arrays.stream(strng);
+System.out.println(stream.skip(1).findFirst());
+What will be the output of above code?
+1). abc
+2). abcxyz
+3). xyz
+4). Optional[xyz]
+Solution :
+option [4] is correct
+
+3.
+Q. String []strng = new String[]{"abc","xyz","abcxyz"};
+Stream<String>stream = Arrays.stream(strng);
+System.out.println(stream.limit(1).findAny());
+What will be the output of above code?
+1). abc
+2). xyz
+3). Optional[abc]
+4). Optional[xyz]
+Solution :
+option [3] is correct
+
+
+4.
+Q. Which of the given are characteristics of Stream API?
+1). Designed for lamdas
+2). Can easily be output as an array or list
+3). Support indexed access
+4). bounded
+Solution :
+option [1,2] are correct
+
+
+5.
+hich of the given syntax is correct to display elements of an array given below using streams?
+String[]strng = new String[]{"IGATE","GLOBAL","SOLUTION"};
+1). Stream<String>stream = Arrays.stream(strng);
+stream.forEach((str)->{
+System.out.println(str);});
+2). Stream<String>stream = Arrays.stream(strng);
+stream.forEach((str)->
+System.out.println(str););
+3). Stream<String>stream = Arrays.getStream(strng);
+stream.forEach((str)->
+System.out.println(str););
+4). Stream<String>stream = Arrays.getStream(strng);
+stream.forEach((str)->{
+System.out.println(str);});
+Solution :
+option [1] is correct
+
+
+6.
+
+ String []strng = new String[]{"abc","xyz","abcxyz"};
+Select the correct option to print only the string elements that contains "xyz"?
+1). Stream<String>stream = Arrays.stream(strng);
+  stream.filter(str->str.contains("xyz")).forEach(strn->System.out.println(strn));
+2). Stream<String>stream = Arrays.stream(strng);
+  stream.distinct(str->str.contains("xyz")).forEach(strn->System.out.println(strn));
+3). System.out.println(stream.allMatch(str1->str1.contains("xyz")));
+4). System.out.println(stream.anyMatch(str1->str1.contains("xyz")));
+Solution :
+option [1] is correct
+
+
+
+7.
+
+Q. Which of the given statements are true about functional interface?
+1). Use of @FunctionalInterface is optional
+2). It has exactly one abstract method
+3). It can also have static and default method
+4). It may contain more than one abstract method
+Solution :
+option [1,2,3] are correct
+
+
+8.
+
+. @FunctionalInterface StringI
+{
+String getString();
+}Which of the given syntax is correct to call this getString() method?
+1). ("Welcome to India")->getString();
+2). StringI ref =()->"Welcome to India";
+  System.out.println(ref.getString());
+3). String ref =("Welcome to India")->getString();
+  System.out.println(ref);
+4). none of the above
+Solution :
+option [2] is correct
+
+
+
+9.
+. BiFunction<Integer,Integer,Integer>max = (x,y)->(x>y)?x:y;
+  System.out.println(max.apply(5, 52));
+Which of the given statements are true about above code?
+1). It generate the output as 50
+2). Compilation error, as apply need to be called with 3 arguments
+3). It will execute successfully if below change is done
+BiFunction<Integer,Integer>max = (x,y)->(x>y)?x:y;
+4). Same expression can also be written as
+BinaryOperator<Integer> maxFunction = (x,y) -> x>y?x:y;
+System.out.println(max.apply(5,52));
+Solution :
+option [1,4] are correct
+
+
+10.
+Q. Which of the given options are built-in functional interfaces?
+1). supplier
+2). consumer
+3). predicate
+4). producer
+Solution :
+option [1,2,3] are correct
+
+
 
 
 
